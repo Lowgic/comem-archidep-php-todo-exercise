@@ -10,6 +10,7 @@ define('DB_PORT', '3306');
 $db = new PDO('mysql:host='.DB_HOST.';port='.DB_PORT.';dbname='.DB_NAME, DB_USER, DB_PASS);
 $items = array();
 
+if(isset($_POST['action'])) {
 switch($_POST['action']) {
 
   /**
@@ -63,6 +64,7 @@ switch($_POST['action']) {
 
   default:
     break;
+}
 }
 
 /**
